@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGF Contabilidade e Consultoria | Juiz de Fora - MG</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0A192F',
+                            800: '#112240',
+                            700: '#1D3557',
+                        },
+                        emerald: {
+                            600: '#059669',
+                            500: '#10B981',
+                            400: '#34D399',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                            400: '#E5C158'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Top Bar / Notification -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-navy-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-map-marker-alt text-emerald-400 mr-1.5"></i> Rua Chácara, 176 - Santa Luzia, Juiz de Fora - MG</span>
+                <span class="hidden md:inline"><i class="fas fa-clock text-emerald-400 mr-1.5"></i> Seg - Sex: 08h às 18h</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:32984164899" class="hover:text-emerald-400 transition"><i class="fas fa-phone-alt text-emerald-400 mr-1.5"></i> (32) 98416-4899</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-800 shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    NGF
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-white block leading-none">NGF</span>
+                    <span class="text-xs font-medium text-emerald-400 tracking-widest uppercase block mt-1">Contabilidade & Consultoria</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-emerald-400 transition">Início</a>
+                <a href="#servicos" class="hover:text-emerald-400 transition">Serviços</a>
+                <a href="#sobre" class="hover:text-emerald-400 transition">Sobre Nós</a>
+                <a href="#diferenciais" class="hover:text-emerald-400 transition">Diferenciais</a>
+                <a href="#contato" class="hover:text-emerald-400 transition">Contato</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20NGF%20Contabilidade." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-lg hover:shadow-emerald-500/25 transition-all flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    Falar com Especialista
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Abrir Menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-900 border-b border-navy-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-slate-300 hover:text-emerald-400 font-medium mobile-link">Início</a>
+            <a href="#servicos" class="block py-2 text-slate-300 hover:text-emerald-400 font-medium mobile-link">Serviços</a>
+            <a href="#sobre" class="block py-2 text-slate-300 hover:text-emerald-400 font-medium mobile-link">Sobre Nós</a>
+            <a href="#diferenciais" class="block py-2 text-slate-300 hover:text-emerald-400 font-medium mobile-link">Diferenciais</a>
+            <a href="#contato" class="block py-2 text-slate-300 hover:text-emerald-400 font-medium mobile-link">Contato</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20NGF%20Contabilidade." target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold py-3 rounded-lg shadow flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> Falar com Especialista
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white py-20 lg:py-32 overflow-hidden">
+        <!-- Background Graphic Elements -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-96 h-96 rounded-full bg-emerald-500 filter blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-blue-600 filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+                        <i class="fas fa-shield-alt"></i> Soluções Contábeis para Empresas (B2B)
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Soluções Contábeis e Consultoria Estratégica para o <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Crescimento da sua Empresa</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Reduza sua carga tributária com total segurança jurídica, organize o financeiro com nosso BPO especializado e tome decisões inteligentes baseadas em números reais.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/5532984164899?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-emerald-500/30 transition-all flex items-center justify-center gap-3 text-base">
+                            <i class="fab fa-whatsapp text-xl"></i> Falar com Especialista
+                        </a>
+                        <a href="#contato" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 text-base">
+                            <i class="fas fa-file-invoice-dollar"></i> Solicitar Proposta
+                        </a>
+                    </div>
+
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-navy-700/60 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl font-bold text-emerald-400">+100</div>
+                            <div class="text-xs text-slate-400 mt-1">Empresas Atendidas</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-emerald-400">100%</div>
+                            <div class="text-xs text-slate-400 mt-1">Foco Consultivo</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-emerald-400">Juiz de Fora</div>
+                            <div class="text-xs text-slate-400 mt-1">e Região</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Card / Form Preview -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card p-8 rounded-2xl shadow-2xl relative border border-white/10 bg-gradient-to-b from-white/10 to-navy-900/40">
+                        <div class="absolute -top-4 -right-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg uppercase tracking-wider">
+                            Atendimento Rápido
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-2">Diagnóstico Tributário Gratuito</h3>
+                        <p class="text-sm text-slate-300 mb-6">Descubra se sua empresa está pagando impostos a mais e como podemos otimizar sua operação.</p>
+                        
+                        <form id="hero-contact-form" onsubmit="handleQuickForm(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Nome do Responsável</label>
+                                <input type="text" id="quick-name" required class="w-full bg-navy-950/80 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-sm" placeholder="Seu nome completo">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">WhatsApp / Telefone</label>
+                                <input type="tel" id="quick-phone" required class="w-full bg-navy-950/80 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-sm" placeholder="(32) 99999-9999">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Faturamento Aproximado / Mês</label>
+                                <select id="quick-revenue" class="w-full bg-navy-950/80 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500 text-sm">
+                                    <option value="Simples Nacional até 150k">Simples Nacional (Até R$ 150 mil/mês)</option>
+                                    <option value="Simples Nacional acima 150k">Simples Nacional (Acima R$ 150 mil/mês)</option>
+                                    <option value="Lucro Presumido">Lucro Presumido</option>
+                                    <option value="Lucro Real">Lucro Real</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold py-3.5 rounded-lg shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                                <i class="fas fa-paper-plane"></i> Solicitar Análise Gratuita
+                            </button>
+                        </form>
+                        <div id="quick-form-feedback" class="hidden mt-4 p-3 bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs rounded-lg text-center">
+                            Solicitação enviada com sucesso! Redirecionando para o WhatsApp...
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority / Trust Badges -->
+    <section class="bg-navy-950 text-slate-300 py-10 border-y border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-emerald-400 mb-1">Legalidade</div>
+                    <div class="text-sm text-slate-400">Total conformidade com o Fisco</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-emerald-400 mb-1">Redução</div>
+                    <div class="text-sm text-slate-400">Carga tributária otimizada</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-emerald-400 mb-1">BPO</div>
+                    <div class="text-sm text-slate-400">Financeiro terceirizado e ágil</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-emerald-400 mb-1">Juiz de Fora</div>
+                    <div class="text-sm text-slate-400">Atendimento presencial e online</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">Soluções Corporativas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3 mb-4">Serviços Contábeis Especializados para B2B</h2>
+                <p class="text-slate-600 text-lg">Cuidamos de toda a burocracia e contabilidade para que você possa focar exclusivamente na expansão do seu negócio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-200 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Planejamento Tributário Estratégico</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Análise profunda do regime de tributação (Simples Nacional, Lucro Presumido ou Real) para garantir que sua empresa pague apenas os impostos estritamente necessários, dentro da legalidade.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Planejamento%20Tributário." target="_blank" class="text-emerald-600 font-semibold text-sm flex items-center gap-2 hover:text-emerald-700">
+                        Saiba mais <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-200 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">BPO Financeiro (Terceirização)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Controle total do contas a pagar, contas a receber, conciliação bancária e fluxo de caixa executado por especialistas, dando visibilidade e segurança financeira à diretoria.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20BPO%20Financeiro." target="_blank" class="text-emerald-600 font-semibold text-sm flex items-center gap-2 hover:text-emerald-700">
+                        Saiba mais <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-200 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Folha de Pagamento & DP</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Gestão completa de departamento pessoal, eSocial, cálculo de pró-labore, férias, rescisões e cumprimento rigoroso das leis trabalhistas, evitando passivos judiciais.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Folha%20de%20Pagamento." target="_blank" class="text-emerald-600 font-semibold text-sm flex items-center gap-2 hover:text-emerald-700">
+                        Saiba mais <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-200 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Contabilidade Consultiva</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Não entregamos apenas guias. Analisamos indicadores de desempenho, margem de lucro e projeções para auxiliar os sócios nas decisões estratégicas do negócio.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Contabilidade%20Consultiva." target="_blank" class="text-emerald-600 font-semibold text-sm flex items-center gap-2 hover:text-emerald-700">
+                        Saiba mais <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-slate-200 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">Abertura e Alteração Societária</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Constituição ágil de empresas, elaboração de contratos sociais sob medida, alterações societárias, cisões, fusões e regularizações completas perante os órgãos competentes.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Abertura%20de%20Empresas." target="_blank" class="text-emerald-600 font-semibold text-sm flex items-center gap-2 hover:text-emerald-700">
+                        Saiba mais <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gradient-to-br from-navy-900 to-navy-800 text-white rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Migração de Contabilidade</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Está insatisfeito com seu escritório atual? Cuidamos de todo o processo de migração de forma simples, transparente e sem burocracia para sua empresa.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5532984164899?text=Olá!%20Quero%20fazer%20uma%20migração%20de%20contabilidade." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm py-2.5 px-4 rounded-lg text-center transition shadow">
+                        Migrar Agora
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Diferenciais -->
+    <section id="diferenciais" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">Por que escolher a NGF?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 leading-tight">
+                        Parceiros estratégicos do seu negócio em Juiz de Fora e região
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Entendemos os desafios diários de gerir uma empresa no Brasil. Por isso, combinamos atendimento humanizado com processos ágeis e tecnologia para entregar resultados reais.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg">Equipe Especializada em B2B</h4>
+                                <p class="text-slate-600 text-sm mt-1">Profissionais focados em atender demandas complexas de empresas de comércio, serviços e indústrias.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg">Proatividade Fiscal e Tributária</h4>
+                                <p class="text-slate-600 text-sm mt-1">Antecipamos obrigações e buscamos oportunidades de economia antes que os prazos apertem.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg">Atendimento Ágil e Humanizado</h4>
+                                <p class="text-slate-600 text-sm mt-1">Sem robôs demorados. Canais diretos com contadores que conhecem a história da sua empresa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Card Box -->
+                <div class="bg-navy-900 text-white p-8 sm:p-10 rounded-3xl shadow-2xl border border-navy-800 relative overflow-hidden">
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl"></div>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Pronto para elevar o nível da sua contabilidade?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-8">
+                        Converse hoje mesmo com nossos especialistas. Avaliaremos a situação atual da sua empresa sem compromisso.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 bg-navy-800/80 p-4 rounded-xl border border-navy-700">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Atendimento Telefônico / WhatsApp</div>
+                                <a href="tel:32984164899" class="font-bold text-white hover:text-emerald-400 text-base">(32) 98416-4899</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 bg-navy-800/80 p-4 rounded-xl border border-navy-700">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Localização em Juiz de Fora</div>
+                                <div class="font-bold text-white text-sm">Rua Chácara, 176 - Santa Luzia</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://wa.me/5532984164899?text=Olá!%20Gostaria%20de%20agendar%20uma%20conversa%20com%20a%20NGF%20Contabilidade." target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl text-center block shadow-lg transition">
+                            <i class="fab fa-whatsapp mr-2"></i> Chamar no WhatsApp Agora
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="sobre" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30">Sobre a NGF</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
+                        Compromisso com o sucesso dos empresários em Juiz de Fora
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        A <strong>NGF Contabilidade e Consultoria</strong> nasceu com a missão de transformar a contabilidade em um instrumento de gestão e crescimento para os empresários. Sabemos que administrar uma empresa exige coragem e foco, e nosso papel é garantir retaguarda sólida em impostos, finanças e pessoal.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Localizados estrategicamente no bairro Santa Luzia em Juiz de Fora - MG, atendemos com excelência empresas de diversos portes e segmentos, unindo atendimento personalizado e tecnologia de ponta.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="border-l-2 border-emerald-400 pl-4">
+                            <div class="text-xl font-bold text-white">Visão</div>
+                            <div class="text-xs text-slate-400 mt-1">Ser referência em contabilidade consultiva B2B na região.</div>
+                        </div>
+                        <div class="border-l-2 border-emerald-400 pl-4">
+                            <div class="text-xl font-bold text-white">Missão</div>
+                            <div class="text-xs text-slate-400 mt-1">Proteger o patrimônio e impulsionar a lucratividade dos clientes.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-6">
+                    <div class="bg-gradient-to-br from-navy-800 to-navy-900 p-8 sm:p-10 rounded-3xl border border-navy-700 shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                            <i class="fas fa-building text-emerald-400"></i> Dados da Empresa
+                        </h3>
+                        <ul class="space-y-4 text-slate-300 text-sm">
+                            <li class="flex items-start gap-3 pb-3 border-b border-navy-700">
+                                <i class="fas fa-signature text-emerald-400 mt-1"></i>
+                                <div>
+                                    <strong class="block text-white">Razão Social / Nome Fantasia</strong>
+                                    NGF Contabilidade e Consultoria
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 pb-3 border-b border-navy-700">
+                                <i class="fas fa-map-marker-alt text-emerald-400 mt-1"></i>
+                                <div>
+                                    <strong class="block text-white">Endereço Completo</strong>
+                                    Rua Chácara, 176 - Santa Luzia<br>Juiz de Fora - MG, CEP 36030-000
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 pb-3 border-b border-navy-700">
+                                <i class="fas fa-phone-alt text-emerald-400 mt-1"></i>
+                                <div>
+                                    <strong class="block text-white">Telefone e WhatsApp</strong>
+                                    (32) 98416-4899
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-clock text-emerald-400 mt-1"></i>
+                                <div>
+                                    <strong class="block text-white">Horário de Atendimento</strong>
+                                    Segunda a Sexta-feira: 08:00 às 18:00
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contato" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-600 font-bold text-xs uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">Entre em Contato</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3 mb-4">Fale com a NGF Contabilidade</h2>
+                <p class="text-slate-600 text-lg">Estamos prontos para atender sua empresa. Envie sua mensagem ou visite nosso escritório em Juiz de Fora.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-slate-200">
+                    <h3 class="text-2xl font-bold text-navy-900 mb-6">Envie uma Mensagem</h3>
+                    
+                    <form id="main-contact-form" onsubmit="handleMainForm(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Seu Nome *</label>
+                                <input type="text" id="contact-name" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-500 text-sm" placeholder="Nome completo">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">WhatsApp / Telefone *</label>
+                                <input type="tel" id="contact-phone" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-500 text-sm" placeholder="(32) 99999-9999">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">E-mail Corporativo</label>
+                                <input type="email" id="contact-email" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-500 text-sm" placeholder="seu@email.com.br">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Serviço de Interesse</label>
+                                <select id="contact-service" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-500 text-sm">
+                                    <option value="Planejamento Tributário">Planejamento Tributário</option>
+                                    <option value="BPO Financeiro">BPO Financeiro</option>
+                                    <option value="Folha de Pagamento / DP">Folha de Pagamento / DP</option>
+                                    <option value="Abertura de Empresa">Abertura de Empresa</option>
+                                    <option value="Migração de Contabilidade">Migração de Contabilidade</option>
+                                    <option value="Outros Assuntos">Outros Assuntos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">Mensagem / Dúvida</label>
+                            <textarea id="contact-message" rows="4" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-emerald-500 text-sm" placeholder="Conte brevemente sobre sua empresa e sua necessidade..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition text-base flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-lg"></i> Enviar Mensagem via WhatsApp
+                        </button>
+                    </form>
+                    <div id="main-form-feedback" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl text-center text-sm font-medium">
+                        Mensagem formatada com sucesso! Abrindo o WhatsApp...
+                    </div>
+                </div>
+
+                <!-- Info and Location Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-navy-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Endereço</h4>
+                                    <p class="text-slate-300 text-sm mt-1">Rua Chácara, 176 - Santa Luzia<br>Juiz de Fora - MG, 36030-000</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">WhatsApp Comercial</h4>
+                                    <p class="text-slate-300 text-sm mt-1">(32) 98416-4899</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-base">Horário de Funcionamento</h4>
+                                    <p class="text-slate-300 text-sm mt-1">Segunda a Sexta: 08h00 às 18h00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-navy-800">
+                            <a href="https://maps.google.com/?q=Rua+Chacara+176+Santa+Luzia+Juiz+de+Fora+MG" target="_blank" class="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl text-center block transition text-sm">
+                                <i class="fas fa-directions mr-2"></i> Abrir no Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold text-lg">
+                            NGF
+                        </div>
+                        <span class="text-lg font-bold text-white tracking-tight">NGF Contabilidade e Consultoria</span>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-md leading-relaxed">
+                        Soluções contábeis e consultoria estratégica voltada para o crescimento seguro e sustentável de empresas em Juiz de Fora e região.
+                    </p>
+                    <div class="text-xs text-slate-500 pt-2">
+                        Rua Chácara, 176 - Santa Luzia - Juiz de Fora - MG | Tel: (32) 98416-4899
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-emerald-400 transition">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-emerald-400 transition">Serviços</a></li>
+                        <li><a href="#sobre" class="hover:text-emerald-400 transition">Sobre Nós</a></li>
+                        <li><a href="#diferenciais" class="hover:text-emerald-400 transition">Diferenciais</a></li>
+                        <li><a href="#contato" class="hover:text-emerald-400 transition">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Serviços B2B</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#servicos" class="hover:text-emerald-400 transition">Planejamento Tributário</a></li>
+                        <li><a href="#servicos" class="hover:text-emerald-400 transition">BPO Financeiro</a></li>
+                        <li><a href="#servicos" class="hover:text-emerald-400 transition">Folha de Pagamento</a></li>
+                        <li><a href="#servicos" class="hover:text-emerald-400 transition">Contabilidade Consultiva</a></li>
+                        <li><a href="#servicos" class="hover:text-emerald-400 transition">Abertura de Empresas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-navy-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+                <p>&copy; 2026 NGF Contabilidade e Consultoria. Todos os direitos reservados.</p>
+                <p class="text-slate-500">Desenvolvido com foco em alta performance e conversão B2B.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5532984164899?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20contador." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-all hover:scale-110 focus:outline-none" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Quick Hero Form handler
+        function handleQuickForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('quick-name').value;
+            const phone = document.getElementById('quick-phone').value;
+            const revenue = document.getElementById('quick-revenue').value;
+
+            const feedback = document.getElementById('quick-form-feedback');
+            feedback.classList.remove('hidden');
+
+            const message = `Olá! Meu nome é *${name}*, meu WhatsApp é *${phone}*. Faturamento aproximado: *${revenue}*. Gostaria de solicitar um diagnóstico tributário.`;
+            const encoded = encodeURIComponent(message);
+
+            setTimeout(() => {
+                window.open(`https://wa.me/5532984164899?text=${encoded}`, '_blank');
+            }, 1000);
+        }
+
+        // Main Contact Form handler
+        function handleMainForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const email = document.getElementById('contact-email').value;
+            const service = document.getElementById('contact-service').value;
+            const userMsg = document.getElementById('contact-message').value;
+
+            const feedback = document.getElementById('main-form-feedback');
+            feedback.classList.remove('hidden');
+
+            const message = `Olá, NGF Contabilidade! Me chamo *${name}*.\nTelefone: *${phone}*\nE-mail: *${email || 'Não informado'}*\nServiço de interesse: *${service}*\nMensagem: ${userMsg || 'Gostaria de mais informações.'}`;
+            const encoded = encodeURIComponent(message);
+
+            setTimeout(() => {
+                window.open(`https://wa.me/5532984164899?text=${encoded}`, '_blank');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
